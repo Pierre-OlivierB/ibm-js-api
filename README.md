@@ -8,3 +8,5 @@ Appuyer sur le bouton et donner une instruction (une seule à la fois/chaque cli
 -pause (music pause)
 -passe (next music)
 -reviens (prev music)
+-fort (volume +50%)
+-baisse (volume -50%)

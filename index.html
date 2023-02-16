@@ -5,17 +5,57 @@
     <meta name="viewport" content="width=device-width" />
 
     <title>Mon premier tchatbot</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <div>
-      <button id="go">..lancer ...</button>
+    <div class="container">
+      <article>
+        <div class="content">
+          <button id="go" title="lancer les commandes vocales">
+            ... lancer ...
+          </button>
+        </div>
+        <audio
+          src="./list/ambient-background-cross-cultures-131570.mp3"
+          controls
+          id="playerAudio"
+        ></audio>
+        <section>
+          <h1>En parlant : action possible après click "...lancer..."</h1>
+          <ul>
+            <li>
+              <p>lance (music play)</p>
+            </li>
+            <li>
+              <p>pause (music pause)</p>
+            </li>
+            <li>
+              <p>passe (next music)</p>
+            </li>
+            <li>
+              <p>reviens (prev music)</p>
+            </li>
+            <li>
+              <p>fort (volume +50%)</p>
+            </li>
+            <li>
+              <p>baisse (volume -50%)</p>
+            </li>
+          </ul>
+        </section>
+      </article>
     </div>
-    <audio
-      src="./list/ambient-background-cross-cultures-131570.mp3"
-      controls
-      id="playerAudio"
-    ></audio>
+    <footer>
+      <p>Crédit : Pierre-Olivier B., IBM Académie</p>
+      <button>
+        <a
+          href="https://pierre-olivierb.netlify.app/"
+          title="retour sur le portefolio"
+          >Revenir au site</a
+        >
+      </button>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>

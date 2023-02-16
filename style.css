@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* background: red; */
+  height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: hsl(240, 30%, 75%);
+}
+article {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: hsl(240, 30%, 85%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px 2px black;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+section {
+  height: 50%;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+#go,
+button {
+  width: 50%;
+  height: 35px;
+  border: 1px solid transparent;
+  background-color: hsl(240, 30%, 75%);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-shadow: 5px 5px 2px 2px hsl(240, 30%, 35%);
+  font-size: 18px;
+  transition: all 1s ease;
+}
+#go:hover,
+button:hover {
+  background-color: hsl(6, 93%, 71%);
+  transform: scale(1.1);
+  box-shadow: 5px 5px 2px 2px hsl(0, 0%, 30%);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10%;
+  background: hsl(240, 30%, 85%);
+}
+footer button {
+  width: 20%;
+}
