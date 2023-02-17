@@ -16,6 +16,8 @@ body {
   /* background: red; */
   height: 100vh;
   font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 50px;
+  background: var(--light);
 }
 .container {
   width: 100%;
@@ -126,33 +128,51 @@ footer button {
 }
 #modalBtn {
   border: 1px solid var(--dark);
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  max-width: 150px;
+  font-size: 2rem;
 }
 /* !---------------------------- */
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
+  display: flex; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
+  width: 10px; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: var(--darker-black); /* Fallback color */
   background-color: var(--darker-b-trans); /* Black w/ opacity */
+  overflow: hidden;
+}
+.modal-display {
+  width: 100%;
 }
 
 /* Modal Content/Box */
 .modal-content {
+  transform: translateX(-300px);
   background-color: var(--lighter-white);
-  margin: 50% auto; /* 15% from the top and centered */
+  /* margin: 50% auto; 15% from the top and centered */
   padding: 20px;
   border: 1px solid var(--darker-black);
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 30%; /* Could be more or less, depending on screen size */
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: flex-start;
+  transition: all 1s ease;
+}
+.modal-content-display {
+  width: 30%;
+  min-width: 300px;
+  transform: translateX(1px);
+  transition: transform 1s ease;
 }
 
 /* The Close Button */
@@ -171,4 +191,17 @@ footer button {
   text-decoration: none;
   cursor: pointer;
   transform: translate(10px, -15px) scale(1.5);
+}
+.modal-content section {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.modal-content section ul {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
