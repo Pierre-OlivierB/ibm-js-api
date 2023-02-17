@@ -1,3 +1,12 @@
+:root {
+  --dark: hsl(240, 30%, 35%);
+  --light: hsl(240, 30%, 75%);
+  --ultra-light: hsl(240, 30%, 85%);
+  --darker-black: hsl(0, 0%, 30%);
+  --darker-b-trans: hsla(0, 0%, 30%, 0.8);
+  --lighter-white: hsl(0, 0%, 90%);
+  --salmon-bg: hsl(6, 93%, 71%);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,12 +19,12 @@ body {
 }
 .container {
   width: 100%;
-  height: 90%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: hsl(240, 30%, 75%);
+  background: var(--light);
 }
 article {
   width: 50%;
@@ -24,9 +33,9 @@ article {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: hsl(240, 30%, 85%);
+  background: var(--ultra-light);
   border-radius: 10px;
-  box-shadow: 5px 5px 2px 2px black;
+  box-shadow: 5px 5px 2px 2px var(--darker-black);
   padding: 5px;
 }
 .content {
@@ -43,7 +52,9 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100%;
+  width: 100%;
+  /* height: 100%; */
+  flex-wrap: wrap;
 }
 #go,
 button {
@@ -51,26 +62,26 @@ button {
   min-width: 130px;
   height: 35px;
   border: 1px solid transparent;
-  background-color: hsl(240, 30%, 75%);
+  background-color: var(--light);
   border-radius: 5px;
   cursor: pointer;
   font-family: Georgia, "Times New Roman", Times, serif;
-  box-shadow: 5px 5px 2px 2px hsl(240, 30%, 35%);
+  box-shadow: 5px 5px 2px 2px var(--dark);
   font-size: 18px;
   transition: all 1s ease;
 }
 #go:hover,
 button:hover {
-  background-color: hsl(6, 93%, 71%);
+  background-color: var(--salmon-bg);
   transform: scale(1.1);
-  box-shadow: 5px 5px 2px 2px hsl(0, 0%, 30%);
+  box-shadow: 5px 5px 2px 2px var(--darker-black);
 }
 footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 10%;
-  background: hsl(240, 30%, 85%);
+  background: var(--ultra-light);
 }
 footer button {
   width: 20%;
@@ -89,4 +100,75 @@ footer button {
   footer button {
     width: 30%;
   }
+}
+/* !------------------------------- */
+.container-card-modal {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+}
+.content-card-modal {
+  background: var(--light);
+  width: 20%;
+  min-width: 80px;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  margin-left: 20px;
+  flex-direction: column;
+  /* overflow: scroll; */
+}
+#modalBtn {
+  border: 1px solid var(--dark);
+}
+/* !---------------------------- */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--darker-black); /* Fallback color */
+  background-color: var(--darker-b-trans); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--lighter-white);
+  margin: 50% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid var(--darker-black);
+  width: 80%; /* Could be more or less, depending on screen size */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+/* The Close Button */
+.close {
+  color: var(--darker-black);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transform: translate(10px, -15px);
+  transition: transform 1s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--salmon-bg);
+  text-decoration: none;
+  cursor: pointer;
+  transform: translate(10px, -15px) scale(1.5);
 }

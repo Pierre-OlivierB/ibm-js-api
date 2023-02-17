@@ -129,3 +129,44 @@ recognition.onresult = function (event) {
       return lit("vous pouvez répéter la question ?");
   }
 };
+
+// !------------------------------------------
+// *Modal Part
+// *Part 1 :btn => display popup
+const btnAdd = document.getElementById("modalBtn");
+// !-------------------------------------------------
+// *part 2: btn display timer
+const popup = document.getElementById("popup");
+const text = document.getElementById("text");
+// !---------------------------------------
+// *Add from W3School
+// Get the modal
+const modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+const span = document.getElementById("closeModal");
+
+// When the user clicks on the button, open the modal
+function addModal() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function btnCloseModal() {
+  modal.style.display = "none";
+  return;
+}
+
+span.addEventListener("click", btnCloseModal);
+
+// When the user clicks anywhere outside of the modal, close it
+function clickCloseModal() {
+  modal.style.display = "none";
+  return;
+}
+window.addEventListener("click", (e) => {
+  if (e.target == modal) {
+    clickCloseModal();
+  }
+});
+btnAdd.addEventListener("click", addModal);
